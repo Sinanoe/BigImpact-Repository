@@ -1,0 +1,80 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'museo-sans-300';
+	font-size: 16px;
+	color: #ffffff;
+	background: #2E2D2D;
+}
+
+
+header {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+header > div {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+	padding: 100px;
+    max-width: 640px;
+    color: #ffffff;
+    background: lightgrey url('../images/TeamLogo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 3px solid #555;
+	border-radius: 8px;
+}
+
+
+main > section {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#fieldsforinput {
+    display: block;
+    text-align: center;
+    margin-left: -200px;
+}
+
+#inputfields {
+    display: inline-block;
+    margin: 10px;
+    width: 250px;
+    text-align: right;
+}
+
+#submitbutton {
+    text-align: center;
+}
+
+footer#teamtable{
+display: flex;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background-color: white;
+    outline: none;
+}
+
+input:focus{
+    border: 3px solid #555;
+}
+
+footer {
+    text-align: center;
+    color: black;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
