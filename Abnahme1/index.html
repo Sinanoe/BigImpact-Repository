@@ -14,7 +14,12 @@
 	</header>
 	<main>
 		<section>
+<<<<<<< HEAD
             <form>
+=======
+            <form action="http://kittey.rockz:1111/api/V1/addPlayer" method="get">
+                
+>>>>>>> 3b835a43aa17e503f9ddb5b29bc3e220a4bd7e8b
                 <label for="Vorname">Vorname: </label>
                 <input class="zentriert" type="text" id="vorname" name="vorname">
                 <br>
@@ -35,7 +40,30 @@
                     value="ja" checked="checked"/>Ja<br/>
                     <input type="checkbox" name="nein"
                     value="nein"/>Nein<br/>
-
+               
+                Position
+                    <select name="position" size="1">
+                    <option value="center">Center</option> 
+                    <option value="guard">Guard</option> 
+                    <option value="powerf">Power Forward</option>
+                    <option value="wing" selected="wing">Wing</option>
+                    <option value="smallf">Small Forward</option>  
+                    </select>
+                <br>
+                    <label for="Rückennummer">Rückennummer: </label>
+                    <input type="number" id="number" name="number">
+                    <br>
+                    <label for="Geburtsjahr">Geburtsjahr: </label>
+                    <input type="number" id="jahr" name="jahr">
+                    <br>
+                
+                Favorit markieren<br/>
+                    <input type="checkbox" name="favorit"
+                    value="favorit" />Favorit<br/>
+                    <br/>
+                <button type="submit">anmelden</button>
+                
+               
             </form>
           
 		</section>
