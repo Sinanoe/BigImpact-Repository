@@ -28,7 +28,7 @@ header > div {
 	background-position: center center;
 	background-repeat: no-repeat;
 	border-radius: 8px;
-    border-bottom-style: dashed;
+    border-color: black;
 	text-align: justify;
 }
 
@@ -52,123 +52,64 @@ header h1 > span {
 	color: #333333;
 }
 
-header p {
-	margin: 32px 0px 0px 0px;
-	font-family: 'museo-sans-300';
-	font-size: 20px;
-}
-
-header a {
-	color: #d0494b;
-	font-weight: bold;
-	text-decoration: none;
-	transition: 250ms all ease-out;
-}
-
-header a:hover,
-header a:focus {
-	color: #333333;
-	transition: 250ms all ease-out;
-}
-
-header small {
-	display: inline-block;
-	margin: 2em 0px 0px 0px;
-	font-size: 16px;
-	color: #333333;
-}
-
-
 main section {
-	padding: 16px 0px;
-	text-align: center;
-    color: lightyellow;
+    color: white;
+    display: flex;
 }
 
-main section article:hover figure div {
-	width: 96px;
-	height: 96px;
-	line-height: 96px;
-	border: 16px solid #b33f40;
-	background: #d0494b;
-	font-size: 64px;
-}
-
-main section article h3 {
-	margin: 32px 0px;
-	font-size: 32px;
-	text-align: center;
-	transition: all 250ms ease-out;
-}
-
-main section article:hover h3 {
-	color: #d0494b;
-}
-
-main section article p {
-	font-size: 20px;
+main > div {
+    display: flex;
+	margin: 0px auto;
+	padding: 100px;
+	width: 100%;
+	max-width: 640px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+    border-color: white;
+    border-bottom-style: double;
 	text-align: justify;
 }
 
-main section article a {
-	color: #d0494b;
-	font-weight: bold;
-	text-decoration: none;
-	transition: 250ms all ease-out;
+input {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: auto;
+    background-color: white;
+    padding-left: 20px;
 }
 
+label {/*
+    display: flex;
+    text-align: center;*/
+}
+/*.zentriert {
+    text-align: center;
+}*/
+
+/*
 main section article a:hover,
 main section article a:focus {
 	color: #ffe51f;
 	transition: 250ms all ease-out;
 }
 
+*/
 
+/*
 main section article.social {
 	width: auto;
 	height: auto;
 }
-
-
-main section article.social a {
-	display: inline-block;
-	margin: 16px;
-	width: 64px;
-	height: 64px;
-	border-radius: 32px;
-	vertical-align: top;
-}
-
-main section article.social a:hover,
-main section article.social a:focus {
-	background: #ffe51f;
-}
+*/
 
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	width: 100%;
-	padding: 64px 0px;
-	background-color: #ffffff;
-	background-image: url('./background.png');
-	background-size: 25%;
-	background-position: 0px 0px;
-	background-blend-mode: multiply;
-	background-repeat: repeat repeat;
+    text-align: center;
+    color: black;
+    background-color: white;
 }
-
-footer a {
-	display: block;
-	width: 30%;
-	margin: 0 auto;
-}
-
-footer a img {
-	width: 100%;
-}
-
 
 /*
  * MEDIA QUERIES
