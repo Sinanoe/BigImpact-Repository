@@ -1,0 +1,129 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+	font-size: 16px;
+	color: #ffffff;
+	background: #2E2D2D;
+}
+
+
+header {
+    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+
+}
+
+#between {
+    background-color: white;
+    padding: 20px;
+}
+
+#teamlogo {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+	padding: 100px;
+    max-width: 640px;
+    color: #ffffff;
+    background: lightgrey url('../images/TeamLogo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 3px solid #555;
+    border-color: #F66983;
+	border-radius: 8px;
+}
+
+#navibereich li {
+    display: inline;
+    list-style-type: none;
+}
+
+#navibereich {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#navbar{
+    color: white;
+    background-color: #F66983;
+    padding: 10px;
+}
+
+#navibereich a {
+    color: #2E2D2D;
+    text-decoration: none;
+    padding: 4px 8px;
+    font-size: 20px;
+}
+
+#navibereich a:hover {
+    background-color: #F6A5B3;
+    padding: 10px;
+}
+
+#basketballimage {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 22em;
+    height: 20px;
+    font-size: 20px;
+}
+
+
+main > section {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#fieldsforinput {
+    display: block;
+    text-align: center;
+    margin-left: -200px;
+}
+
+#inputfields {
+    display: inline-block;
+    margin: 10px;
+    width: 250px;
+    text-align: right;
+}
+
+#submitbutton {
+    text-align: center;
+}
+
+footer#teamtable{
+    display: flex;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background-color: white;
+    outline: none;
+}
+
+input:focus{
+    border: 3px solid #555;
+    border-color: #F6A5B3;
+}
+
+footer {
+    text-align: center;
+    color: black;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
