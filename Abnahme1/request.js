@@ -1,4 +1,4 @@
-function myFunction() {
+function sendData() {
 
     var formData = new FormData();
     var inputs = document.getElementsByTagName('input');
