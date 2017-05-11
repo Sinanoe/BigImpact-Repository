@@ -1,33 +1,39 @@
 function validateForm() {
+    
     var vorname = document.getElementById("vorname").value;
     var name = document.getElementById("name").value;
     var verein = document.getElementById("verein").value;
     var hcoach = document.getElementById("hcoach").value;
     var acoach = document.getElementById("acoach").value;
+
+    if(!vorname.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
+        document.getElementById("vornameNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+    }else{
+        document.getElementById("vornameNotification").innerHTML = "";
+    }
     
-    var alphabet[] = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-    var[] alphabetG = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+    if(!name.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
+        document.getElementById("nameNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+    }else{
+        document.getElementById("nameNotification").innerHTML = "";
+    }
     
-    for(int i=0; i< =vorname.length; i++){
-        var zeichen = vorname.charAt(i);
-        var alpha = alphabet[i];
-        var alphaG = alphabetG[i];
-        
-        if(!(zeichen == alpha) ||!(zeichen == alphaG){
-            alert("Felder dürfen keine Sonderzeichen enthalten.")
-            return false;
-        }else{
-            return true;
-        }
-                                           }
-    if (vorname == "" || name == "" || verein == "" || hcoach ="" || acoach== "") {
-        alert("Felder dürfen nicht leer sein.");
-        return false;
+    if(!verein.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
+        document.getElementById("vereinNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+    }else{
+        document.getElementById("vereinNotification").innerHTML = "";
+    }
+    
+    if(!hcoach.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
+        document.getElementById("hcoachNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+    }else{
+        document.getElementById("hcoachNotification").innerHTML = "";
+    }
+    
+    if(!acoach.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
+        document.getElementById("acoachNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+    }else{
+        document.getElementById("acoachNotification").innerHTML = "";
     }
 
-
-}
-
-function alert(var txt){
-    document.getElementById("notification").innerHTML = txt;
 }
