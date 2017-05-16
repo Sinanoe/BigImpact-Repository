@@ -127,3 +127,21 @@ footer {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
+table, td{
+    border: 1px solid white;
+    text-align: left;
+    padding: 5px;
+    
+}
+
+th{
+    border: 1px solid white;
+    text-align: center;
+    background-color: orange;
+    padding: 5px;
+}
+
+#tabelle1 {
+    text-align: flex;
+}
