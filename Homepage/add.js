@@ -120,9 +120,47 @@ function createTable(data){
     
     var myTable = document.createElement("table"); 
     var mytablebody = document.createElement("tbody");
+    mycurrent_throw = document.createElement("tr")
+    
+    var th1 = document.createElement("th");
+    textname = document.createTextNode("Name");
+    th1.appendChild(textname);
+    
+    var th2 = document.createElement("th");
+    textvorname = document.createTextNode("Vorname");
+    th2.appendChild(textvorname);
+    
+    var th3 = document.createElement("th");
+    textclub = document.createTextNode("Club");
+    th3.appendChild(textclub);
+    
+    var th4 = document.createElement("th");
+    textcoach = document.createTextNode("Coach");
+    th4.appendChild(textcoach);
+    
+    var th5 = document.createElement("th");
+    textnumber = document.createTextNode("Number");
+    th5.appendChild(textnumber);
+    
+    var th6 = document.createElement("th");
+    textposition = document.createTextNode("Position");
+    th6.appendChild(textposition);
+    
+    var th7 = document.createElement("th");
+    textyear = document.createTextNode("Year");
+    th7.appendChild(textyear);
+    
+    mycurrent_throw.appendChild(th1);
+    mycurrent_throw.appendChild(th2);
+    mycurrent_throw.appendChild(th3);
+    mycurrent_throw.appendChild(th4);
+    mycurrent_throw.appendChild(th5);
+    mycurrent_throw.appendChild(th6);
+    mycurrent_throw.appendChild(th7);
+    
+    mytablebody.appendChild(mycurrent_throw);
     
     for(var key in data){
-        console.log(data[key]);
         
         mycurrent_row = document.createElement("tr");
         mytablebody.appendChild(mycurrent_row);
@@ -159,7 +197,6 @@ function createTable(data){
         mycurrent_row.appendChild(mycurrent_cell5); 
         mycurrent_row.appendChild(mycurrent_cell6); 
         mycurrent_row.appendChild(mycurrent_cell7); 
-
     
     }
 
