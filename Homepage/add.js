@@ -1,3 +1,4 @@
+//validates the input fields
 function validateForm() {
     
     var vorname = document.getElementById("vorname").value;
@@ -66,6 +67,7 @@ function validateForm() {
     }
 }
 
+//sends Data to the Server
 function sendData() {
 
     var formData = new FormData();
@@ -93,6 +95,9 @@ function sendData() {
 
 }
 
+/*gets Data from the server
+*gets JSON objects
+*/
 function receiveData(){
     
     var xhr = new XMLHttpRequest();
@@ -103,9 +108,6 @@ function receiveData(){
         var data = xhr.response;
     
         if(data != null){
-            //TODO: Tabelle löschen
-            
-            //Tabelle erstellen
             createTable(data);
         }else{
             console.log(data);
@@ -116,6 +118,7 @@ function receiveData(){
    
 }
 
+//table creation
 function createTable(data){
     
     var myTable = document.createElement("table"); 
