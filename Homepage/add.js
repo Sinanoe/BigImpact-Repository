@@ -18,20 +18,6 @@ function validateForm() {
         document.getElementById("vornameNotification").innerHTML = "";
     }
     
-    if((nummer<=3)&&(nummer>=16)){
-        document.getElementById("numberNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
-        check=false;
-    }else{
-        document.getElementById("numberNotification").innerHTML = "";
-    }
-    
-    if(geburtsjahr<=0&&geburtsjahr>=2015){
-        document.getElementById("yearNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
-        check=false;
-    }else{
-        document.getElementById("yearNotification").innerHTML = "";
-    }
-    
     if(!name.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
         document.getElementById("nameNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
         check=false;
@@ -58,6 +44,20 @@ function validateForm() {
         check=false;
     }else{
         document.getElementById("acoachNotification").innerHTML = "";
+    }
+    
+    if(nummer<4||nummer>15){
+        document.getElementById("numberNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        check=false;
+    }else{
+        document.getElementById("numberNotification").innerHTML = "";
+    }
+    
+    if(geburtsjahr<=0||geburtsjahr>=2015){
+        document.getElementById("yearNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        check=false;
+    }else{
+        document.getElementById("yearNotification").innerHTML = "";
     }
    
     if(check==true){
