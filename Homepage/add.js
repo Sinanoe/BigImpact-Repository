@@ -117,24 +117,51 @@ function receiveData(){
 }
 
 function createTable(data){
+    
     var myTable = document.createElement("table"); 
     var mytablebody = document.createElement("tbody");
     
-    for(var i=0; i<=data.length; i++){
+    for(var key in data){
+        console.log(data[key]);
+        
         mycurrent_row = document.createElement("tr");
-        mytablebody.appendChild(mycurrent_row); 
+        mytablebody.appendChild(mycurrent_row);
+        
+        var mycurrent_cell1 = document.createElement("td");
+        var mycurrent_cell2 = document.createElement("td");
+        var mycurrent_cell3 = document.createElement("td");
+        var mycurrent_cell4 = document.createElement("td");
+        var mycurrent_cell5 = document.createElement("td");
+        var mycurrent_cell6 = document.createElement("td");
+        var mycurrent_cell7 = document.createElement("td");
+
+            
+        currentname = document.createTextNode("" + data[key].name);
+        currentvorname = document.createTextNode("" + data[key].vorname);
+        currentclub = document.createTextNode("" + data[key].club);
+        currentcoach = document.createTextNode("" + data[key].coach);
+        currentnummer = document.createTextNode("" + data[key].number);
+        currentposition = document.createTextNode("" + data[key].position);
+        currentjahr = document.createTextNode("" + data[key].year);
+        
+        mycurrent_cell1.appendChild(currentname);
+        mycurrent_cell2.appendChild(currentvorname); 
+        mycurrent_cell3.appendChild(currentclub); 
+        mycurrent_cell4.appendChild(currentcoach); 
+        mycurrent_cell5.appendChild(currentnummer); 
+        mycurrent_cell6.appendChild(currentposition); 
+        mycurrent_cell7.appendChild(currentjahr); 
+        
+        mycurrent_row.appendChild(mycurrent_cell1); 
+        mycurrent_row.appendChild(mycurrent_cell2); 
+        mycurrent_row.appendChild(mycurrent_cell3); 
+        mycurrent_row.appendChild(mycurrent_cell4); 
+        mycurrent_row.appendChild(mycurrent_cell5); 
+        mycurrent_row.appendChild(mycurrent_cell6); 
+        mycurrent_row.appendChild(mycurrent_cell7); 
+
     
-    for(var j = 0; j <= 8; j++) { 
-        mycurrent_cell = document.createElement("td");                
-        currentname = document.createTextNode("Hallo" + data[j].name);
-        currentverein = document.createTextNode("Hallo" + data[j].name);
-        currentvorname = document.createTextNode("Hallo" + data[j].name);
-        current = document.createTextNode("Hallo" + data[j].name);
-        currenttext = document.createTextNode("Hallo" + data[j].name);
-        currenttext = document.createTextNode("Hallo" + data[j].name);
-        mycurrent_cell.appendChild(currenttext); 
-        mycurrent_row.appendChild(mycurrent_cell); 
-    }}
+    }
 
     myTable.appendChild(mytablebody); 
     document.getElementById('tabelle1').appendChild(myTable); 
