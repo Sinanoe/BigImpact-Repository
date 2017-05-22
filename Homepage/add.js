@@ -13,49 +13,49 @@ function validateForm() {
     var check = true;
 
     if(!vorname.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
-        document.getElementById("vornameNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("vornameNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("vornameNotification").innerHTML = "";
     }
     
     if(!name.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
-        document.getElementById("nameNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("nameNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("nameNotification").innerHTML = "";
     }
     
     if(!verein.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
-        document.getElementById("vereinNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("vereinNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("vereinNotification").innerHTML = "";
     }
     
     if(!hcoach.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
-        document.getElementById("hcoachNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("hcoachNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("hcoachNotification").innerHTML = "";
     }
     
     if(!acoach.match(/^[a-zA-zöaüßÖÄÜ]+$/)){
-        document.getElementById("acoachNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("acoachNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("acoachNotification").innerHTML = "";
     }
     
     if(nummer<4||nummer>15){
-        document.getElementById("numberNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("numberNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("numberNotification").innerHTML = "";
     }
     
     if(geburtsjahr<=0||geburtsjahr>=2015){
-        document.getElementById("yearNotification").innerHTML = "Bitte &uumlberpr&uumlfe diese Eingabe.";
+        document.getElementById("yearNotification").innerHTML = "Eingabe fehlerhaft.";
         check=false;
     }else{
         document.getElementById("yearNotification").innerHTML = "";
@@ -64,6 +64,8 @@ function validateForm() {
     if(check==true){
         sendData();
         alert("Information send.")
+    }else{
+        alert("Einige Eingaben sind fehlerhaft. Bitte ueberpruefen Sie ihre Eingaben.");
     }
 }
 
@@ -78,8 +80,6 @@ function sendData() {
         formData.append(inputs[i].name,inputs[i].value);
     }
         formData.append('position', select.options[select.selectedIndex].value);
-    
-
     
     var xhr = new XMLHttpRequest();
     
