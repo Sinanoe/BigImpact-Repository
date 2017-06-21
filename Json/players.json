@@ -1,0 +1,222 @@
+[
+  {
+    "_id": "563890f4f2af4503fac53d6e",
+    "name": "Jackson",
+    "vorname": "Erika",
+    "club": "LA",
+    "coach": "Miao Lijie",
+    "position": "Guard",
+    "number": 10,
+    "year": 1999,
+    "favorit": false
+  },
+  {
+    "_id": "549649f85a4sc92916c9a45c",
+    "name": "Floyd",
+    "vorname": "Bank",
+    "club": "Chelsea",
+    "coach": "Emilia Gomis",
+    "position": "Wing",
+    "number": 2,
+    "year": 1993,
+    "favorit": false
+  },
+  {
+    "_id": "573542f4f3e652a5cc4f45cf",
+    "name": "Hammon",
+    "vorname": "Sandrine",
+    "club": "City",
+    "coach": "Nevriye Yilmaz",
+    "position": "Center",
+    "number": 13,
+    "year": 1993,
+    "favorit": true
+  },
+  {
+    "_id": "575709f41fc722c2437f1b8a",
+    "name": "Lee",
+    "vorname": "John",
+    "club": "Celtics",
+    "coach": "Streichert Frank",
+    "position": "Wing",
+    "number": 4,
+    "year": 1982,
+    "favorit": true
+  },
+  {
+    "_id": "583746f4ce8476ecfcd324b6",
+    "name": "Maillet",
+    "vorname": "Anne",
+    "club": "Raptors",
+    "coach": "Sharon Essor",
+    "position": "Guard",
+    "number": 6,
+    "year": 1989,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4f90e9c9913cd00bd",
+    "name": "Flay",
+    "vorname": "Jennifer",
+    "club": "Portland",
+    "coach": "Swing Carl",
+    "position": "Center",
+    "number": 7,
+    "year": 1967,
+    "favorit": true
+  },
+  {
+    "_id": "575709f432ff985a8b7462c6",
+    "name": "Kuntzel",
+    "vorname": "Hazel",
+    "club": "Black Bear",
+    "coach": "George Potter",
+    "position": "Guard",
+    "number": 11,
+    "year": 1979,
+    "favorit": true
+  },
+  {
+    "_id": "575709f4a4e0ffb9cb597afd",
+    "name": "McDonal",
+    "vorname": "Robert",
+    "club": "Bucket",
+    "coach": "Frank Jopling",
+    "position": "Power Forward",
+    "number": 10,
+    "year": 1989,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4b72e7ae9966fbfa6",
+    "name": "Naldi",
+    "vorname": "Glen",
+    "club": "Chicago Bulls",
+    "coach": "Brett Brown",
+    "position": "Power Forward",
+    "number": 10,
+    "year": 1978,
+    "favorit": true
+  },
+  {
+    "_id": "577482f40d0c874639a3960b",
+    "name": "Camacho",
+    "vorname": "Curry",
+    "club": "Miami Heat",
+    "coach": "Tom Thibodeau",
+    "position": "Small Forward",
+    "number": 5,
+    "year": 1988,
+    "favorit": false
+  },
+  {
+    "_id": "575709f418cdd0ac5ee4f92d",
+    "name": "Kean",
+    "vorname": "Stuart",
+    "club": "Jazz",
+    "coach": "Dave Jorger",
+    "position": "Wing",
+    "number": 6,
+    "year": 2000,
+    "favorit": true
+  },
+  {
+    "_id": "556286f8976cf12b453652ca",
+    "name": "Jopling",
+    "vorname": "Pat",
+    "club": "King",
+    "coach": "Dave Joerger",
+    "position": "Small Forward",
+    "number": 7,
+    "year": 1999,
+    "favorit": false
+  },
+  {
+    "_id": "575709f736db4aab3c83762e",
+    "name": "Clyde",
+    "vorname": "Matthias",
+    "club": "Chair",
+    "coach": "Ruth Saxon",
+    "position": "Power Forward",
+    "number": 9,
+    "year": 1998,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4ff201136d54320af",
+    "name": "Busse",
+    "vorname": "Masha",
+    "club": "Link",
+    "coach": "Ildoko Pub",
+    "position": "Wing",
+    "number": 10,
+    "year": 1991,
+    "favorit": false
+  },
+  {
+    "_id": "575342f4e9ef432e6f3c98fc",
+    "name": "Rotella",
+    "vorname": "James",
+    "club": "Pelicans",
+    "coach": "Alvin Gentry",
+    "position": "Small Forward",
+    "number": 1,
+    "year": 2001,
+    "favorit": false
+  },
+  {
+    "_id": "579837f4f20ce6d3freb3c763",
+    "name": "Nelson",
+    "vorname": "Mike",
+    "club": "Blazers",
+    "coach": "John Riddy",
+    "position": "Wing",
+    "number": 0,
+    "year": 1992,
+    "favorit": true
+  },
+  {
+    "_id": "575709f45c7d63749a09275f",
+    "name": "Clements",
+    "vorname": "Neil",
+    "club": "Sox",
+    "coach": "Jeff Darker",
+    "position": "Small Forward",
+    "number": 10,
+    "year": 1989,
+    "favorit": false
+  },
+  {
+    "_id": "576372f3425f7753d777c4cb",
+    "name": "Higgings",
+    "vorname": "Hamad",
+    "club": "Phone",
+    "coach": "Little Mic",
+    "position": "Wing",
+    "number": 5,
+    "year": 1994,
+    "favorit": true
+  },
+  {
+    "_id": "575709f666dcc4d33da0be4e",
+    "name": "Emens",
+    "vorname": "Lena",
+    "club": "Sparks",
+    "coach": "James Peto",
+    "position": "Center",
+    "number": 12,
+    "year": 1978,
+    "favorit": false
+  },
+  {
+    "_id": "577382f418c34acc36bd642b",
+    "name": "Starling",
+    "vorname": "Simon",
+    "club": "Boat",
+    "coach": "Gael Gibson",
+    "position": "Center",
+    "number": 2,
+    "year": 1988,
+    "favorit": true
+  }
+]
