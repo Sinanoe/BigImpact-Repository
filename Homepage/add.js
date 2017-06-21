@@ -118,9 +118,43 @@ function receiveData(){
    
 }
 
+function filterFavorites(){
+    
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
+    xhr.responseType= 'json';
+    xhr.onload = function(){
+        var data = xhr.response;
+    
+        if(data != null){
+            createTable(data);
+        }else{
+            console.log(data);
+        }
+    }
+    
+    xhr.send(null);
+    
+}
+
+function toggle(button){
+  if(document.getElementById("123").value=="OFF"){
+   document.getElementById("123").value="ON";
+   filterFavorites();
+   }
+
+  if(document.getElementById("123").value=="ON"){
+   document.getElementById("123").value="OFF";
+   receiveData();
+   }
+}
+
 //table creation
 function createTable(data){
-    
+
+    document.getElementById('tabelle1').innerHTML = "";
+
     var myTable = document.createElement("table"); 
     var mytablebody = document.createElement("tbody");
     mycurrent_throw = document.createElement("tr")
