@@ -142,12 +142,11 @@ function toggle(button){
   if(document.getElementById("123").value=="OFF"){
    document.getElementById("123").value="ON";
    filterFavorites();
-   }
-
-  if(document.getElementById("123").value=="ON"){
-   document.getElementById("123").value="OFF";
+   }else if(document.getElementById("123").value=="ON"){
+    document.getElementById("123").value="OFF";
    receiveData();
    }
+
 }
 
 //table creation
