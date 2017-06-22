@@ -83,7 +83,7 @@ function sendData() {
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', 'http://188.166.165.74:13337/api/players', true);
+    xhr.open('POST', '../api/players', true);
     //xhr.setRequestHeader('Access-Control-Allow-Origin','*');
     xhr.setRequestHeader('Content-Type','application/json');
     //xhr.setRequestHeader('Accept','*/*');
@@ -161,6 +161,40 @@ function searchPlayers(){
     xhr.send(null);
     }
 }
+
+function deletePlayer(id){
+
+    var xhr = new XMLHttpRequest();
+    var data;
+
+    xhr.open('GET', '../api/players', true);
+    xhr.responseType= 'json';
+    xhr.onload = function(){
+        data = xhr.response;
+
+    }
+
+    xhr.send(null);
+    
+    var xhr1 = new XMLHttpRequest();
+
+    if(id != null){
+    xhr1.open('DELETE', '../api/players/:' + id, true);
+    xhr1.responseType= 'json';
+    xhr1.onload = function(){
+        var player = xhr.response;
+
+        if(data != null){
+            createTable(data);
+        }else{
+            console.log(data);
+        }
+    }
+
+    xhr1.send(null);
+    }
+}
+
 
 function toggle(button){
   if(document.getElementById("123").value=="OFF"){
@@ -247,6 +281,8 @@ function createTable(data){
         currentposition = document.createTextNode("" + data[key].position);
         currentjahr = document.createTextNode("" + data[key].year);
         currentdeletebutton = document.createElement("BUTTON");
+        
+        currentdeletebutton.setAttribute("id", "" + data[key].id);
 
 
         var t = document.createTextNode("delete");
