@@ -102,7 +102,7 @@ function receiveData(){
     
     var xhr = new XMLHttpRequest();
     
-    xhr.open('GET', 'http://188.166.165.74:13337/api/players', true);
+    xhr.open('GET', '../api/players', true);
     xhr.responseType= 'json';
     xhr.onload = function(){
         var data = xhr.response;
@@ -122,7 +122,8 @@ function filterFavorites(){
     
     var xhr = new XMLHttpRequest();
     
-    xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
+    //xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
+    xhr.open('GET', '../api/players?favorites=true', true);
     xhr.responseType= 'json';
     xhr.onload = function(){
         var data = xhr.response;
@@ -151,9 +152,8 @@ function toggle(button){
 
 //table creation
 function createTable(data){
-
     document.getElementById('tabelle1').innerHTML = "";
-
+    
     var myTable = document.createElement("table"); 
     var mytablebody = document.createElement("tbody");
     mycurrent_throw = document.createElement("tr")

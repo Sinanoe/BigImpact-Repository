@@ -3,7 +3,7 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io').listen(server);
 
-var players = require('./players.json');
+var players = require('./api/players.json');
 
 /*
  Die Dateien werden aus den jeweiligen Verzeichnissen statisch geladen
