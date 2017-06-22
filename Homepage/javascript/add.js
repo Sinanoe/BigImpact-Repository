@@ -142,9 +142,11 @@ function filterFavorites(){
 function searchPlayers(){
     
     var xhr = new XMLHttpRequest();
+    var char = document.getElementById('addr').value;
     
+    if(char != null){
     //xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
-    xhr.open('GET', '../api/players?search=<char>', true);
+    xhr.open('GET', '../api/players?search=' + char, true);
     xhr.responseType= 'json';
     xhr.onload = function(){
         var data = xhr.response;
@@ -157,7 +159,7 @@ function searchPlayers(){
     }
     
     xhr.send(null);
-    
+    }
 }
 
 function toggle(button){
