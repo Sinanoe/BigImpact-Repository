@@ -139,6 +139,27 @@ function filterFavorites(){
     
 }
 
+function searchPlayers(){
+    
+    var xhr = new XMLHttpRequest();
+    
+    //xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
+    xhr.open('GET', '../api/players?search=<char>', true);
+    xhr.responseType= 'json';
+    xhr.onload = function(){
+        var data = xhr.response;
+    
+        if(data != null){
+            createTable(data);
+        }else{
+            console.log(data);
+        }
+    }
+    
+    xhr.send(null);
+    
+}
+
 function toggle(button){
   if(document.getElementById("123").value=="OFF"){
    document.getElementById("123").value="ON";
