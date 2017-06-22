@@ -1,0 +1,44 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <title>Big Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="design/homepage.css">
+    <script type="text/javascript" src="add.js"></script>
+</head>
+
+<body>
+   <header>
+		<div id="teamlogo">
+		</div>
+        <div id="between">
+        </div>
+        <div id="navbar">
+            <ul id="navibereich">
+            <li id="navi01"><a href="home.html">Home</a></li>
+            <li id="navi02"><a href="addplayers.html">Add Player</a></li>
+            <li id="navi02" onclick="receiveData()"><a href="players.html">Players</a></li>
+            <li id="navi03"><a href="chat.html">Big Chat</a></li>
+            </ul>
+            </div>
+	</header> 
+	<main>
+        <section id="section">
+        <form>
+            <center>
+                <label for="nachrichten" id="nachricht">Nachrichten:</label>
+                <textarea id="text"  cols="80" rows="15" maxlength="140" readonly placeholder="Willkommen, bitte gebe deinen Usernamen ein"></textarea><br>
+                <label for="eingabe" id="username">Eingabe:</label>
+                <input type="text" id="name" size="15" name="eingabe"/><br>
+                <input id="senden" type="submit" value="Senden"/>
+            </center>
+        </form>
+            
+		</section>
+	</main>
+	<footer>
+     
+	</footer>
+</body>
+</html>
