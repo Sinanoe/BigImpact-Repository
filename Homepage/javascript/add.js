@@ -83,7 +83,7 @@ function sendData() {
     
     var xhr = new XMLHttpRequest();
     
-    xhr.open('POST', 'http://188.166.165.74:13337/api/players', true);
+    xhr.open('POST', '../api/players', true);
     //xhr.setRequestHeader('Access-Control-Allow-Origin','*');
     xhr.setRequestHeader('Content-Type','application/json');
     //xhr.setRequestHeader('Accept','*/*');
