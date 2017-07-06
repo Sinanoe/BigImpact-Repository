@@ -238,7 +238,7 @@ function createTable(data){
         var mycurrent_cell5 = document.createElement("td");
         var mycurrent_cell6 = document.createElement("td");
         var mycurrent_cell7 = document.createElement("td");
-        //var mycurrent_cell8 = document.createElement("td");
+        var mycurrent_cell8 = document.createElement("td");
 
 
         currentname = document.createTextNode("" + data[key].name);
@@ -299,7 +299,7 @@ function createTable(data){
         mycurrent_cell5.appendChild(currentnummer);
         mycurrent_cell6.appendChild(currentposition);
         mycurrent_cell7.appendChild(currentjahr);
-        //mycurrent_cell8.appendChild(currentdeletebutton);
+        mycurrent_cell8.appendChild(currentdeletebutton);
 
 
         mycurrent_row.appendChild(mycurrent_cell1);
@@ -309,7 +309,7 @@ function createTable(data){
         mycurrent_row.appendChild(mycurrent_cell5);
         mycurrent_row.appendChild(mycurrent_cell6);
         mycurrent_row.appendChild(mycurrent_cell7);
-        mycurrent_row.appendChild(currentdeletebutton);
+        mycurrent_row.appendChild(mycurrent_cell8);
     }
 
     myTable.appendChild(mytablebody);
