@@ -162,38 +162,6 @@ function searchPlayers(){
     }
 }
 
-function deletePlayer(id){
-
-    var xhr = new XMLHttpRequest();
-    var data;
-
-    xhr.open('GET', '../api/players', true);
-    xhr.responseType= 'json';
-    xhr.onload = function(){
-        data = xhr.response;
-
-    }
-
-    xhr.send(null);
-    
-    var xhr1 = new XMLHttpRequest();
-
-    if(id != null){
-    xhr1.open('DELETE', '../api/players/:' + id, true);
-    xhr1.responseType= 'json';
-    xhr1.onload = function(){
-        var player = xhr.response;
-
-        if(data != null){
-            createTable(data);
-        }else{
-            console.log(data);
-        }
-    }
-
-    xhr1.send(null);
-    }
-}
 
 
 function toggle(button){
@@ -282,7 +250,44 @@ function createTable(data){
         currentjahr = document.createTextNode("" + data[key].year);
         currentdeletebutton = document.createElement("BUTTON");
         
-        currentdeletebutton.setAttribute("id", "" + data[key].id);
+        currentdeletebutton.setAttribute('id', "" + data[key]._id);
+        console.log('' + data[key]._id);
+        
+        currentdeletebutton.onclick = function() {
+            
+            var xhr1 = new XMLHttpRequest();
+
+                xhr1.open('DELETE', '../api/players/' + currentdeletebutton.getAttribute('id') , true);
+                xhr1.responseType= 'json';
+                xhr1.onload = function(){
+                var player = xhr1.response;
+
+            if(player != null){
+                console.log('Player ' + currentdeletebutton.getAttribute('id') + ' deleted.');
+                
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', '../api/players', true);
+                xhr.responseType= 'json';
+                xhr.onload = function(){
+                var data = xhr.response;
+
+                if(data != null){
+                    createTable(data);
+                }else{
+                console.log(data);
+                }
+    }
+
+    xhr.send(null);
+
+            }else{
+                console.log('Ups, something is wrong.');
+            }
+            }
+                
+        xhr1.send(null);
+            }
 
 
         var t = document.createTextNode("delete");
