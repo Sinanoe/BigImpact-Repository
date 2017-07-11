@@ -170,7 +170,6 @@ function toggle(button){
     document.getElementById("123").value="OFF";
    receiveData();
    }
-
 }
 
 function deletePlayer(id){
@@ -193,7 +192,11 @@ function deletePlayer(id){
 
                 if(data != null){
                     console.log('Player ' + id + ' deleted.');
-                    createTable(data);
+                      if(document.getElementById("123").value=="OFF"){
+                        receiveData();
+                    }else if(document.getElementById("123").value=="ON"){
+                        filterFavorites();
+                 }
                 }else{
                 console.log(data);
                 }
@@ -212,8 +215,9 @@ function deletePlayer(id){
 
 //table creation
 function createTable(data){
+    if(document.getElementById('tabelle1')!=null){
     document.getElementById('tabelle1').innerHTML = "";
-
+    }
     var myTable = document.createElement("table");
     var mytablebody = document.createElement("tbody");
     mycurrent_throw = document.createElement("tr")
@@ -291,7 +295,7 @@ function createTable(data){
             deletePlayer(data[key]._id);
         }
 
-        var t = document.createTextNode("delete");
+        var t = document.createTextNode("Delete?");
         currentdeletebutton.appendChild(t);
 
         mycurrent_cell1.appendChild(currentname);
