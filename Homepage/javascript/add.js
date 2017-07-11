@@ -84,9 +84,7 @@ function sendData() {
     var xhr = new XMLHttpRequest();
 
     xhr.open('POST', '../api/players', true);
-    //xhr.setRequestHeader('Access-Control-Allow-Origin','*');
     xhr.setRequestHeader('Content-Type','application/json');
-    //xhr.setRequestHeader('Accept','*/*');
     xhr.onload = function (e) {
 
     };
@@ -95,7 +93,8 @@ function sendData() {
 
 }
 
-/*gets Data from the server
+/*
+*gets Data from the server
 *gets JSON objects
 */
 function receiveData(){
@@ -118,11 +117,11 @@ function receiveData(){
 
 }
 
+//filters favorites
 function filterFavorites(){
 
     var xhr = new XMLHttpRequest();
 
-    //xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
     xhr.open('GET', '../api/players?favorites=true', true);
     xhr.responseType= 'json';
     xhr.onload = function(){
@@ -138,14 +137,13 @@ function filterFavorites(){
     xhr.send(null);
 
 }
-
+//filters favorites by a char
 function searchPlayers(){
 
     var xhr = new XMLHttpRequest();
     var char = document.getElementById('addr').value;
 
     if(char != null){
-    //xhr.open('GET', 'http://188.166.165.74:13337/api/players?favorites=true', true);
     xhr.open('GET', '../api/players?search=' + char, true);
     xhr.responseType= 'json';
     xhr.onload = function(){
@@ -172,6 +170,43 @@ function toggle(button){
     document.getElementById("123").value="OFF";
    receiveData();
    }
+
+}
+
+function deletePlayer(id){
+
+    var xhr1 = new XMLHttpRequest();
+
+                xhr1.open('DELETE', '../api/players/' + id , true);
+                xhr1.responseType= 'json';
+                xhr1.onload = function(){
+                var player = xhr1.response;
+
+            if(player != null){
+                
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', '../api/players', true);
+                xhr.responseType= 'json';
+                xhr.onload = function(){
+                var data = xhr.response;
+
+                if(data != null){
+                    console.log('Player ' + id + ' deleted.');
+                    createTable(data);
+                }else{
+                console.log(data);
+                }
+    }
+
+             xhr.send(null);
+
+            }else{
+                console.log('Ups, something is wrong.');
+            }
+        }
+                
+        xhr1.send(null);
 
 }
 
@@ -253,41 +288,8 @@ function createTable(data){
         currentdeletebutton.setAttribute('id', "" + data[key]._id);
         
         currentdeletebutton.onclick = function() {
-            
-            var xhr1 = new XMLHttpRequest();
-
-                xhr1.open('DELETE', '../api/players/' + currentdeletebutton.getAttribute('id') , true);
-                xhr1.responseType= 'json';
-                xhr1.onload = function(){
-                var player = xhr1.response;
-
-            if(player != null){
-                console.log('Player ' + currentdeletebutton.getAttribute('id') + ' deleted.');
-                
-                var xhr = new XMLHttpRequest();
-
-                xhr.open('GET', '../api/players', true);
-                xhr.responseType= 'json';
-                xhr.onload = function(){
-                var data = xhr.response;
-
-                if(data != null){
-                    createTable(data);
-                }else{
-                console.log(data);
-                }
-    }
-
-    xhr.send(null);
-
-            }else{
-                console.log('Ups, something is wrong.');
-            }
-            }
-                
-        xhr1.send(null);
-            }
-
+            deletePlayer(data[key]._id);
+        }
 
         var t = document.createTextNode("delete");
         currentdeletebutton.appendChild(t);
